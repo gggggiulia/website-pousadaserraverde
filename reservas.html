@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reservas</title>
+</head>
+<body>
+    <header>
+        <h1>Pousada Serra Verde</h1>
+    </header>
+    <nav>
+        <div style="display: flex; gap: 20px;">
+            <a href="home.html">Home</a>
+            <a href="apousada.html">A Pousada</a>
+            <a href="reservas.html">Reservas</a>
+            <a href="tarifas.html">Tarifas</a>
+            <a href="comochegar.html">Como chegar</a>
+        </div>
+    </nav>
+    
+    <hr>
+
+    <h2>Reservas</h2>
+    <p>Você pode efetuar a sua reserva pelo telefone (12) 4321-1234, ou pelo nosso site, seguindo os passos abaixo:</p>
+    <ol>
+        <li>Preencha o formulário a seguir.</li>
+        <li>Aguarde nosso contato telefônico, ou por e-mail, para confirmação da reserva.</li>
+        <li>Efetue a transferência do valor da reserva.</li>
+        <li>Envie o comprovante de transferência para o e-mail atendimento@pousadaserraverde.tur.br.</li>
+    </ol>
+
+    <h3>Faça sua reserva agora na Pousada Serra Verde</h3>
+    <form>
+        <fieldset>
+            <legend>Solicitação de Reserva</legend>
+
+        <div>
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" minlegth="3" maxlength="100" required>
+        </div>
+
+        <br>
+
+        <div>
+            <label for="idade">Idade</label>
+            <input
+                type="range" 
+                id="idade" 
+                name="idade" 
+                min="18" 
+                max="120" 
+                value="18"
+                oninput="saida.value = this.value">
+            <output id="saida">18</output> anos
+        </div>
+        
+        <br>
+
+        <div>
+            <label for="celular">Celular</label>
+            <input type="tel" id="celular" name="celular" placeholder="12 3456-7890" pattern="[0-9]{2} [0-9]{4}-[0-9]{4}" required>
+        </div>
+
+        <br>
+
+        <div>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <br>
+
+        <div>
+            <label for="cidade">Cidade</label>
+            <input type="text" id="cidade" name="cidade" required>
+
+            <label for="uf">UF</label>
+            <select id="uf" name="uf">
+                    <option value="SP">SP</option>
+                    <option value="RJ">RJ</option>
+                    <option value="MG">MG</option>
+                    <option value="MG">RS</option>
+                    <option value="MG">PR</option>
+                    <option value="MG">SC</option>
+                    <option value="MG">ES</option>
+                    <option value="MG">MS</option>
+                    <option value="MG">AC</option>
+                    <option value="MG">AL</option>
+                    <option value="MG">AP</option>
+                    <option value="MG">AM</option>
+                    <option value="MG">BA</option>
+                    <option value="MG">CE</option>
+                    <option value="MG">DF</option>
+                    <option value="MG">MA</option>
+                    <option value="MG">MT</option>
+                    <option value="MG">PA</option>
+                    <option value="MG">PB</option>
+                    <option value="MG">PE</option>
+                    <option value="MG">PI</option>
+                    <option value="MG">RN</option>
+                    <option value="MG">RO</option>
+                    <option value="MG">RR</option>
+                    <option value="MG">SE</option>
+                    <option value="MG">TO</option>
+            </select>
+        </div>
+
+        <br>
+
+            <fieldset>
+                <legend>Chalé</legend>
+                <input type="radio" id="economico" name="chale" value="Economico" checked>
+                <label for="economico">Econômico</label>
+
+                <input type="radio" id="standard" name="chale" value="Standard">
+                <label for="standard">Standard</label>
+
+                <input type="radio" id="luxo" name="chale" value="Luxo">
+                <label for="luxo">Luxo</label>
+
+                <input type="radio" id="familia" name="chale" value="Familia">
+                <label for="familia">Família</label>
+            </fieldset>
+
+            <br>
+
+            <div>
+                <label for="adultos">Adultos</label>
+                <input type="number" id="adultos" name="adultos" value="2" min="1" max="10">
+                
+                <label for="criancas">Crianças</label>
+                <input type="number" id="criancas" name="criancas" value="0" min="0" max="10">
+                Até 5 anos <input type="number" id="ate5anos" name="ate5anos" value="0" min="0" max="10">
+            </div>
+
+            <br>
+
+            <div>
+                <input type="checkbox" id="estacionamento" name="estacionamento">
+                <label for="estacionamento">Quero reservar uma vaga no estacionamento.</label>
+            </div>
+
+            <br>
+
+            <div>
+                <label for="pagamento">Forma de Pagamento</label>
+                <select id="pagamento" name="pagamento">
+                    <option value="pix">Pix</option>
+                    <option value="transferencia">Transferência (TED/DOC)</option>
+                    <option value="deposito">Depósito</option>
+                    <option value="credito">Cartão de Crédito</option>
+                    <option value="mastercard">Mastercard</option>
+                    <option value="visa">Visa</option>
+                    <option value="elo">Elo</option>
+                </select>
+            </div>
+
+            <br>
+
+            <div>
+                <label for="pedido">Se desejar, faça um pedido especial:</label><br>
+                <textarea id="pedido" name="pedido" rows="4" cols="50"></textarea>
+            </div>
+
+            <div>
+                <button type="submit">Solicitar Reserva</button>
+            </div>
+        </fieldset>
+    </form>
+</body>
+</html>
